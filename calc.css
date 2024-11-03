@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  background: lightblue;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  padding: 16px;
+  background-color: gray;
+  background: rgb(105, 105, 105); /* Light brown tint */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2),
+    /* Inner shadow for depth */ 0 4px 8px rgba(0, 0, 0, 0.3); /* Outer shadow for elevation */
+  max-width: 500px;
+  overflow: hidden;
+}
+
+button {
+  border-radius: 3px;
+  width: 110px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: aliceblue;
+  box-shadow: 0 4px 2px rgb(239, 244, 244);
+  border: none;
+  cursor: pointer;
+}
+
+#keys {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.row-1 {
+  display: flex;
+  gap: 10px;
+}
+
+#display {
+  width: 100%;
+  padding: 5px;
+  font-size: 2rem;
+  color: white;
+  background-color: rgb(91, 87, 87);
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5),
+    inset 0 -4px 8px rgba(255, 255, 255, 0.1);
+  text-align: right;
+  border: none;
+}
+
+button:hover {
+  background-color: rgb(82, 161, 217);
+  box-shadow: 0 4px 2px rgb(82, 161, 217);
+}
+
+button:active {
+  transform: translateY(4px); /* Move button down */
+  box-shadow: 0 2px 1px rgb(200, 200, 200); /* Reduce shadow */
+}
+
+.operator-btn {
+  background-color: rgb(240 207 207);
+  box-shadow: 0 4px 2px rgb(240 207 207);
+}
+
+.equal-btn {
+  background-color: rgb(117, 244, 168);
+  box-shadow: 0 4px 2px rgb(117, 244, 168);
+}
+
+.equal-btn:hover {
+  background-color: rgb(167, 188, 50);
+  box-shadow: 0 4px 2px rgb(167, 188, 50);
+}
+
+.clear-btn {
+  background-color: rgb(241, 151, 151);
+  box-shadow: 0 4px 2px rgb(241, 151, 151);
+}
+
+.clear-btn:hover {
+  background-color: rgb(240, 112, 112);
+  box-shadow: 0 4px 2px rgb(240, 112, 112);
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .calculator {
+    max-width: 400px;
+    padding: 12px;
+  }
+
+  button {
+    width: 80px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  #display {
+    font-size: 1.5rem;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 320px) {
+  .calculator {
+    max-width: 250px;
+    padding: 10px;
+  }
+
+  #keys {
+    gap: 10px;
+  }
+
+  button {
+    width: 50px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  #display {
+    font-size: 1.2rem;
+    padding: 3px;
+  }
+}
